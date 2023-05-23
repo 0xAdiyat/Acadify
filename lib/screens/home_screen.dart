@@ -91,7 +91,6 @@ class _HomeScreenState extends State<HomeScreen>
                                         return Scaffold(
                                           backgroundColor:
                                               AppColors.colorPrimary,
-                                          // Match the source screen's background color
                                           body: DetailsScreen(
                                             courseTitle: recommendList[index]
                                                 ['courseTitle'],
