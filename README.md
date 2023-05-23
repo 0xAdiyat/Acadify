@@ -1,6 +1,9 @@
-# acadify
+# Acadify
 
 Acadify is an innovative online course app that brings the world of education to your fingertips
+
+Got the inspiration and followed some footstep from yt.com/@AbdulAzizAhwan
+🎨 UI Design Credit by Asril Mochammad: https://www.figma.com/community/file/1064411999504285367
 
 ## Getting Started
 
