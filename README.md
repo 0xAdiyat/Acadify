@@ -5,6 +5,9 @@ Acadify is an innovative online course app that brings the world of education to
 Got the inspiration and followed some footstep from yt.com/@AbdulAzizAhwan
 🎨 UI Design Credit by Asril Mochammad: https://www.figma.com/community/file/1064411999504285367
 
+![Dribbble shot HD - 1](https://github.com/Huss4in007/Acadify/assets/67780459/91539198-3975-40ab-b866-fa761f92638e)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
