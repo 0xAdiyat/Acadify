@@ -1,8 +1,10 @@
+import 'package:acadify/data/dummy_data.dart';
 import 'package:acadify/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/horizontal_list.dart';
+import '../widgets/vertical_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -33,17 +35,57 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 349,
               child: ListView.builder(
-                  itemCount: 2,
+                  itemCount: recommendList.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return HorizontalList(
-                        startColor: 0xFF9288E4,
-                        endColor: 0xFF534EA7,
-                        courseHeadline: 'Recommended',
-                        courseTitle: 'UI/UX DESIGNER\nBEGINNER',
-                        courseImage: 'assets/images/img_saly10.png');
+                      startColor: recommendList[index]['startColor'],
+                      endColor: recommendList[index]['endColor'],
+                      courseHeadline: recommendList[index]['courseHeadline'],
+                      courseTitle: recommendList[index]['courseTitle'],
+                      courseImage: recommendList[index]['courseImage'],
+                      courseHeadlineColor: recommendList[index]
+                          ['courseHeadlineColor'],
+                    );
                   }),
-            )
+            ),
+            SizedBox(
+              height: 34,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Free online class',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.colorWhite,
+                    fontSize: 25,
+                  ),
+                ),
+                Text(
+                  'From over 80 lectures',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.colorSecondaryGrey,
+                    fontSize: 14,
+                  ),
+                ),
+              ],
+            ),
+            ListView.builder(
+                itemCount: courseList.length,
+                shrinkWrap: true,
+                physics: const ClampingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return VerticalList(
+                    courseImage: courseList[index]['courseImage'],
+                    courseTitle: courseList[index]['courseTitle'],
+                    courseDuration: courseList[index]['courseDuration'],
+                    courseRating: courseList[index]['courseRating'],
+                  );
+                })
           ],
         ),
       ),
