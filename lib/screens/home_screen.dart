@@ -1,10 +1,6 @@
-import 'dart:ui';
-
 import 'package:acadify/data/dummy_data.dart';
 import 'package:acadify/utils/colors.dart';
 import 'package:acadify/utils/size.dart';
-import 'package:acadify/widgets/neon_circle_avatar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,8 +17,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
-  bool _expanded = false;
-  double _currentHeight = AppSize.minHeight;
+
+/*  bool _expanded = false;
+  double _currentHeight = AppSize.minHeight;*/
 
   @override
   void initState() {
@@ -135,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
         ),
-        GestureDetector(
+        /*GestureDetector(
           onVerticalDragUpdate: _expanded
               ? (details) {
                   setState(() {
@@ -196,12 +193,12 @@ class _HomeScreenState extends State<HomeScreen>
                   ],
                 );
               }),
-        )
+        )*/
       ],
     );
   }
 
-  Widget _buildMenuContent() {
+/* Widget _buildMenuContent() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -221,8 +218,9 @@ class _HomeScreenState extends State<HomeScreen>
         const Icon(CupertinoIcons.shopping_cart),
       ],
     );
-  }
+  }*/
 }
+/*
 
 Widget _buildExpandedContent() {
   return Padding(
@@ -265,3 +263,4 @@ Widget _buildExpandedContent() {
     ),
   );
 }
+*/
