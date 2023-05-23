@@ -1,4 +1,5 @@
 import 'package:acadify/data/dummy_data.dart';
+import 'package:acadify/screens/details_screen.dart';
 import 'package:acadify/utils/colors.dart';
 import 'package:acadify/utils/size.dart';
 import 'package:flutter/material.dart';
@@ -78,15 +79,37 @@ class _HomeScreenState extends State<HomeScreen>
                       itemCount: recommendList.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return HorizontalList(
-                          startColor: recommendList[index]['startColor'],
-                          endColor: recommendList[index]['endColor'],
-                          courseHeadline: recommendList[index]
-                              ['courseHeadline'],
-                          courseTitle: recommendList[index]['courseTitle'],
-                          courseImage: recommendList[index]['courseImage'],
-                          courseHeadlineColor: recommendList[index]
-                              ['courseHeadlineColor'],
+                        return Hero(
+                          tag: recommendList[index]['courseTitle'],
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      fullscreenDialog: true,
+                                      builder: (context) {
+                                        return Scaffold(
+                                          backgroundColor:
+                                              AppColors.colorPrimary,
+                                          // Match the source screen's background color
+                                          body: DetailsScreen(
+                                            courseTitle: recommendList[index]
+                                                ['courseTitle'],
+                                          ),
+                                        );
+                                      }));
+                            },
+                            child: HorizontalList(
+                              startColor: recommendList[index]['startColor'],
+                              endColor: recommendList[index]['endColor'],
+                              courseHeadline: recommendList[index]
+                                  ['courseHeadline'],
+                              courseTitle: recommendList[index]['courseTitle'],
+                              courseImage: recommendList[index]['courseImage'],
+                              courseHeadlineColor: recommendList[index]
+                                  ['courseHeadlineColor'],
+                            ),
+                          ),
                         );
                       }),
                 ),
