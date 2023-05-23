@@ -26,7 +26,8 @@ List<Map<String, dynamic>> recommendList = [
     'courseHeadline': 'Recommended',
     'courseTitle': 'UI/UX DESIGNER\nBEGINNER',
     'courseImage': 'assets/images/img_saly10.png',
-    'courseHeadlineColor': 0xFFAFA8EE
+    'courseHeadlineColor': 0xFFAFA8EE,
+    'courseRating': 4.0
   },
   {
     'startColor': 0xFFF4C465,
@@ -34,6 +35,7 @@ List<Map<String, dynamic>> recommendList = [
     'courseHeadline': 'NEW CLASS',
     'courseTitle': 'MASTER\nGRAPHIC DESIGN',
     'courseImage': 'assets/images/img_saly36.png',
-    'courseHeadlineColor': 0xFFF4C67A
+    'courseHeadlineColor': 0xFFF4C67A,
+    'courseRating': 5.0
   }
 ];

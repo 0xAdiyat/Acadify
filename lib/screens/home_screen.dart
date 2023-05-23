@@ -95,6 +95,14 @@ class _HomeScreenState extends State<HomeScreen>
                                           body: DetailsScreen(
                                             courseTitle: recommendList[index]
                                                 ['courseTitle'],
+                                            courseImage: recommendList[index]
+                                                ['courseImage'],
+                                            startColor: recommendList[index]
+                                                ['startColor'],
+                                            endColor: recommendList[index]
+                                                ['endColor'],
+                                            courseRating: recommendList[index]
+                                                ['courseRating'],
                                           ),
                                         );
                                       }));
