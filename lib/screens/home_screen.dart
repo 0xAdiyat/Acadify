@@ -251,28 +251,15 @@ Widget _buildExpandedContent() {
           const SizedBox(
             height: 15,
           ),
-          Text(
-            "Last Country",
-            style: TextStyle(fontSize: 12),
+          DefaultTextStyle(
+            style: GoogleFonts.roboto(
+                fontSize: 20,
+                color: AppColors.colorPrimary,
+                fontWeight: FontWeight.w500),
+            child: const Text(
+              "Ahsaf Hussain Adiyat",
+            ),
           ),
-          const SizedBox(
-            height: 15,
-          ),
-          Text(
-            "Bloody Tear",
-            style: TextStyle(fontSize: 20),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(Icons.shuffle),
-              Icon(Icons.pause),
-              Icon(Icons.playlist_add)
-            ],
-          )
         ],
       ),
     ),
