@@ -1,24 +1,33 @@
 import 'package:acadify/screens/home_screen.dart';
+import 'package:acadify/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Acadify',
-      theme: ThemeData(
-        primaryColor: Color(0xff29274f),
-        useMaterial3: true,
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+    ));
+
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value:
+          SystemUiOverlayStyle.dark, // Set the status bar icons' color to dark
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Acadify',
+        theme: ThemeData(
+          primaryColor: AppColors.colorPrimary,
+          useMaterial3: true,
+        ),
+        home: HomeScreen(),
       ),
-      home: HomeScreen(),
     );
   }
 }
