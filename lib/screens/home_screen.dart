@@ -20,8 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppColors.colorPrimary,
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          physics: BouncingScrollPhysics(),
+          padding: const EdgeInsets.only(left: 20),
+          physics: const BouncingScrollPhysics(),
           children: [
             Text(
               "Acadify",
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 349,
               child: ListView.builder(

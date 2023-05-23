@@ -46,7 +46,7 @@ class VerticalList extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 26.0, bottom: 19),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 115,
                     ),
                     Column(
@@ -110,7 +110,7 @@ class VerticalList extends StatelessWidget {
             ),
             Positioned(
               bottom: 34,
-              right: 0,
+              right: 20,
               child: Container(
                 height: MediaQuery.of(context).size.width * 0.06,
                 width: MediaQuery.of(context).size.width * 0.06,
